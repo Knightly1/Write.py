@@ -3,9 +3,15 @@ Write.py
 
 Write.py is a simple Python module for logging text. It is designed to be easy to use and to have a very simple syntax.  It is a wrapper around the Python module colorlog which is itself a wrapper around the Python module logging.
 
+Installation
+------------
+To install Write.py, clone the repository and run the following command:
+```bash
+pip install -r requirements.txt
+```
+
 Usage
 -----
-
 A simple example of usage is as follows:
 ```python
 from write import Write
@@ -63,3 +69,14 @@ log = Write(log_level="debug", use_colors=False, date_format="%Y-%m-%d %H:%M:%S"
 
 log.debug("Hello world")
 ```
+
+Logging Levels
+--------------
+The default logging levels are:
+* `trace` - Usually used for debugging as the author
+* `debug` - Usually used for debugging with the end user
+* `info` - Usually used for logging the execution of a program
+* `warn` - Usually used for logging a warning that something might be wrong
+* `error` - Usually used for logging an error that something went wrong
+* `fatal` - Used for logging an error that something went wrong and the program will exit
+* `help` - Used for logging a help message for the end user
